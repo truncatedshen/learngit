@@ -1,0 +1,176 @@
+初始化
+  git init
+
+添加文件
+  git add 
+  git commit -m “说明”
+
+版本回退
+  git reset --hard HEAD^
+  git reset --hard HEAD~100
+  git reset --hard 版本号
+
+查看提交历史
+  git log
+
+查看命令历史
+  git reflog
+
+撤销修改
+  场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+  场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
+
+删除文件
+  git rm file
+  git commit -m "说明"
+
+远程仓库
+  创建SSH Key
+    ssh-keygen -t rsa -C "youremail@example.com"
+  登录GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。
+  
+  关联一个远程库
+    git remote add origin git@server-name:path/repo-name.git
+
+  
+  第一次推送master分支的所有内容
+    git push -u origin master
+  
+  此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+  
+  克隆一个仓库
+    git clone git@server-name:path/repo-name.git
+  
+  分支管理
+    创建分支
+      git checkout -b dev
+    
+    查看分支
+      git branch
+    
+    切换分支
+      git checkout master
+
+    
+    合并分支
+      git merge dev
+    
+    删除分支
+      git branch -d dev
+    
+    解决冲突
+      git log --graph --pretty=oneline --abbrev-commit
+    
+    分支管理策略
+      git merge --no-ff -m "merge with no-ff" dev
+    
+    Bug分支
+      git stash
+      git stash list
+      git stash apply stash@{0}
+      git stash drop stash@{0}
+
+    Feature分支
+      git branch -D feature-vulcan
+    
+    多人协作
+      git remote
+      git remote -v
+      git push origin branch-name
+      git pull
+      git branch --set-upstream branch-name origin/branch-name
+      git tag <name> <commit id>
+      git tag -a <tagname> -m "blablabla..."
+      git tag -s <tagname> -m "blablabla..."
+      git tag
+      git show <tagname>
+      git tag -d <tagname>
+      git push origin <tagname>
+      git push origin --tags
+      git push origin :refs/tags/<tagname>
+    
+    使用GitHub
+      fork
+      clone
+      push
+      pull request
+    
+    自定义Git
+      git config --global color.ui true
+      git config --global alias.st status
+      git config --global alias.co checkout
+      git config --global alias.ci commit
+      git config --global alias.br branch
+      git config --global alias.unstage 'reset HEAD --'
+      git config --global alias.last 'log -1'
+      git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+      git config --global user.name "Your Name"
+      git config --global user.email "email@example.com"
+      git config --global color.ui true
+      git config --global color.status auto
+      git config --global color.branch auto
+      git config --global color.interactive auto
+      git config --global help.format auto
+      git config --global core.autocrlf input
+      git config --global core.safecrlf true
+      git config --global merge.conflictstyle diff3
+      git config --global mergetool.keepBackup false
+      git config --global mergetool.keepTemporaries false
+      git config --global mergetool.prompt false
+      git config --global mergetool.tooldiff3
+      git config --global mergetool.toolmeld
+      git config --global mergetool.toolopendiff
+      git config --global mergetool.toolvimdiff
+      git config --global mergetool.toolwinmerge
+      git config --global mergetool.toolxxdiff
+      git config --global merge.tool kdiff3
+      git config --global merge.conflictstyle diff3
+      git config --global mergetool.keepBackup false
+      git config --global mergetool.keepTemporaries false
+      git config --global mergetool.prompt false
+      git config --global mergetool.tooldiff3
+      git config --global mergetool.toolmeld
+      git config --global mergetool.toolopendiff
+      git config --global mergetool.toolvimdiff
+      git config --global mergetool.toolwinmerge
+      git config --global mergetool.toolxxdiff
+      git config --global merge.tool kdiff3
+      git config --global merge.conflictstyle diff3
+      git config --global mergetool.keepBackup false
+      git config --global mergetool.keepTemporaries false
+      git config --global mergetool.prompt false
+      git config --global mergetool.tooldiff3
+      git config --global mergetool.toolmeld
+      git config --global mergetool.toolopendiff
+      git config --global mergetool.toolvimdiff
+      git config --global mergetool.toolwinmerge
+      git config --global mergetool.toolxxdiff
+      git config --global merge.tool kdiff3
+      git config --global merge.conflictstyle diff3
+      git config --global mergetool.keepBackup false
+      git config --global mergetool.keepTemporaries false
+      git config --global mergetool.prompt false
+      git config --global mergetool.tooldiff3
+      git config --global mergetool.toolmeld
+      git config --global mergetool.toolopendiff
+      git config --global mergetool.toolvimdiff
+      git config --global mergetool.toolwinmerge
+      git config --global mergetool.toolxxdiff
+      git config --global merge.tool kdiff3
+      git config --global merge.conflictstyle diff3
+      git config --global mergetool.keepBackup false
+      git config --global mergetool.keepTemporaries false
+      git config --global mergetool.prompt false
+      git config --global mergetool.tooldiff3
+      git config --global mergetool.toolmeld
+      git config --global mergetool.toolopendiff
+      git config --global mergetool.toolvimdiff
+      git config --global mergetool.toolwinmerge
+      git config --global mergetool.toolxxdiff
+      git config --global merge.tool kdiff3
+
+
+
+
+
+
