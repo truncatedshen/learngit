@@ -37,6 +37,11 @@
     git push -u origin master
   
   此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+  或者新建master分支，此命令会在本地新建master分支，并将在远程创建分支
+   git checkout -b master
+
+   git push origin master
   
   克隆一个仓库
     git clone git@server-name:path/repo-name.git
